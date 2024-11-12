@@ -7,15 +7,11 @@ const EditProfile = () => {
     <ScrollView style={styles.container}>
       <Card style={styles.card}>
         <Card.Content style={styles.header}>
-          {/* Avatar component for profile picture */}
           <Avatar.Image size={100} source={{ uri: 'https://via.placeholder.com/150' }} />
-
-          {/* Button for changing profile picture */}
           <Button mode="text" style={styles.changePictureButton}>Change Picture</Button>
         </Card.Content>
       </Card>
 
-      {/* Input fields for updating profile */}
       <TextInput
         label="Username"
         value="Nathalie"
@@ -39,7 +35,6 @@ const EditProfile = () => {
         secureTextEntry
       />
 
-      {/* Update button */}
       <Button
         mode="contained"
         style={styles.updateButton}>
@@ -57,24 +52,24 @@ const styles = StyleSheet.create({
   },
   card: {
     marginBottom: 16,
-    elevation: 4, // Adds shadow effect (for Android) without using deprecated styles
-    shadowColor: 'rgba(0, 0, 0, 0.1)', // Applies shadow for iOS
+    elevation: 4,
+    shadowColor: 'rgba(0, 0, 0, 0.1)',
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 4,
     shadowOpacity: 0.2,
-    borderRadius: 8, // Rounded corners for the card
+    borderRadius: 8,
   },
   header: {
     alignItems: 'center',
     marginBottom: 16,
   },
   changePictureButton: {
-    marginTop: 8, // Space between button and image
+    marginTop: 8,
   },
   input: {
     marginVertical: 8,
     backgroundColor: 'white',
-    borderRadius: 8, // Rounded corners for input fields
+    borderRadius: 8,
   },
   updateButton: {
     marginTop: 16,

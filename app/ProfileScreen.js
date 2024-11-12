@@ -7,13 +7,12 @@ const ProfileScreen = ({ navigation }) => {
     <ScrollView style={styles.container}>
       <Card style={styles.card}>
         <Card.Content style={styles.header}>
-          <Avatar.Image size={100} source={{ uri: 'https://via.placeholder.com/150' }} />
-          <Title style={styles.title}>User Name</Title>
-          <Paragraph style={styles.subtitle}>@username</Paragraph>
+          <Avatar.Image size={100} source={require('../assets/images/userprofile.png')} />
+          <Title style={styles.title}>Nathalie Juagpao</Title>
+          <Paragraph style={styles.subtitle}>@natnat</Paragraph>
           <Button
             mode="contained"
             style={styles.editButton}
-            onPress={() => navigation.navigate('EditProfile')}
           >
             Edit Profile
           </Button>
@@ -25,15 +24,13 @@ const ProfileScreen = ({ navigation }) => {
         <List.Item title="Trending" right={() => <List.Icon icon="chevron-right" />} />
         <List.Item title="Today" right={() => <List.Icon icon="chevron-right" />} />
 
-        <List.Subheader style={styles.subheader}>Content</List.Subheader>
-        <List.Item title="Favourite" left={() => <List.Icon icon="heart" />} right={() => <List.Icon icon="chevron-right" />} />
-        <List.Item title="Download" left={() => <List.Icon icon="download" />} right={() => <List.Icon icon="chevron-right" />} />
 
-        <List.Subheader style={styles.subheader}>Preferences</List.Subheader>
-        <List.Item title="Language" left={() => <List.Icon icon="translate" />} right={() => <List.Icon icon="chevron-right" />} />
-        <List.Item title="Darkmode" left={() => <List.Icon icon="theme-light-dark" />} right={() => <List.Icon icon="chevron-right" />} />
-        <List.Item title="Only Download via Wifi" left={() => <List.Icon icon="wifi" />} right={() => <List.Icon icon="chevron-right" />} />
       </List.Section>
+
+      <Button
+        mode="contained"
+        style={styles.editButton}
+      >Logout</Button>
     </ScrollView>
   );
 };
